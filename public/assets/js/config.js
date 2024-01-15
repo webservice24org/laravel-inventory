@@ -47,11 +47,22 @@ function getToken(){
 }
 
 
-function HeaderToken(){
-   let token=getToken();
-   return  {
+// function HeaderToken(){
+//    let token=getToken();
+//    return  {
+//         headers: {
+//             Authorization:token
+//         }
+//     }
+// }
+
+function HeaderToken() {
+    let token = getToken();
+    //console.log('Token:', token); // Log the token to the console for debugging
+    return {
         headers: {
-            Authorization:token
+            Authorization: `Bearer ${token}`
         }
-    }
+    };
 }
+
